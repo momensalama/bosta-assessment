@@ -3,6 +3,7 @@ import { useAuthStore } from "./store/authStore";
 import Layout from "./components/layout/Layout";
 import ProductsPage from "./pages/ProductsPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
+import CreateProductPage from "./pages/CreateProductPage";
 import type { ReactNode } from "react";
 
 // Placeholder pages for future pages
@@ -29,7 +30,7 @@ export default function App() {
           path="/create"
           element={
             <ProtectedRoute>
-              <ComingSoon page="Create Product" />
+              <CreateProductPage />
             </ProtectedRoute>
           }
         />
