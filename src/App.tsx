@@ -4,6 +4,7 @@ import Layout from "./components/layout/Layout";
 import ProductsPage from "./pages/ProductsPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import CreateProductPage from "./pages/CreateProductPage";
+import CartPage from "./pages/CartPage";
 import type { ReactNode } from "react";
 
 // Placeholder pages for future pages
@@ -38,7 +39,7 @@ export default function App() {
           path="/cart"
           element={
             <ProtectedRoute>
-              <ComingSoon page="Cart" />
+              <CartPage />
             </ProtectedRoute>
           }
         />

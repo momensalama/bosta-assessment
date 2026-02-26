@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
-      <div className="mx-auto max-w-6xl px-4 flex h-16 items-center justify-between">
+      <div className="mx-auto max-w-7xl px-4 flex h-16 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <span className="text-2xl font-bold text-red-600">bosta</span>
@@ -61,10 +61,9 @@ export default function Header() {
             }
           >
             <FiShoppingCart className="h-5 w-5" />
-            <span className="hidden sm:inline">Cart</span>
             {cartCount > 0 && (
               <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-600 text-xs font-bold text-white">
-                {cartCount > 9 ? "9+" : cartCount}
+                {cartCount}
               </span>
             )}
           </NavLink>

@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import { FiArrowRight } from "react-icons/fi";
 import type { Product } from "../types";
 import Button from "./ui/Button";
+import AddToCartControl from "./ui/AddToCartControl";
 
 interface ProductCardProps {
   product: Product;
@@ -33,14 +34,17 @@ export default function ProductCard({ product }: Readonly<ProductCardProps>) {
           {product.title}
         </p>
 
-        {/* Price + Button */}
-        <div className="flex items-center justify-between mt-2">
-          <span className="text-lg font-bold text-gray-900">
-            ${product.price.toFixed(2)}
-          </span>
+        {/* Price */}
+        <span className="text-lg font-bold text-gray-900">
+          ${product.price.toFixed(2)}
+        </span>
+
+        {/* Actions */}
+        <div className="flex items-center gap-2 mt-1">
+          <AddToCartControl product={product} size="sm" />
           <Button
-            variant="primary"
-            className="text-xs px-3 py-1.5 gap-1"
+            variant="secondary"
+            className="flex-1 text-xs gap-1 whitespace-nowrap"
             onClick={() => navigate(`/products/${product.id}`)}
           >
             View Details

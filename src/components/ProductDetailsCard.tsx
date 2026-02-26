@@ -1,12 +1,14 @@
-import type { Product } from '../types';
-import StarRating from './StarRating';
-import BackToProducts from './BackToProducts';
+import type { Product } from "../types";
+import StarRating from "./StarRating";
+import AddToCartControl from "./ui/AddToCartControl";
 
 type ProductDetailsCardProps = Readonly<{
   product: Product;
 }>;
 
-export default function ProductDetailsCard({ product }: ProductDetailsCardProps) {
+export default function ProductDetailsCard({
+  product,
+}: ProductDetailsCardProps) {
   return (
     <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
@@ -27,10 +29,7 @@ export default function ProductDetailsCard({ product }: ProductDetailsCardProps)
             {product.title}
           </h1>
 
-          <StarRating
-            rate={product.rating.rate}
-            count={product.rating.count}
-          />
+          <StarRating rate={product.rating.rate} count={product.rating.count} />
 
           <p className="text-3xl font-extrabold text-gray-900">
             ${product.price.toFixed(2)}
@@ -41,7 +40,7 @@ export default function ProductDetailsCard({ product }: ProductDetailsCardProps)
           </p>
 
           <div className="mt-auto pt-4">
-            <BackToProducts variant="button" />
+            <AddToCartControl product={product} size="md" />
           </div>
         </div>
       </div>
