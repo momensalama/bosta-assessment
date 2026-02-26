@@ -14,7 +14,7 @@ type BaseProps = {
   ) => void;
 };
 
-type TextProps = BaseProps & { type: "text"; value: string };
+type TextProps = BaseProps & { type: "text" | "password"; value: string };
 type NumberProps = BaseProps & {
   type: "number";
   value: number | string;
@@ -106,9 +106,10 @@ export default function FormField(props: Readonly<FormFieldProps>) {
       );
     }
 
+    // type === "text" | "password"
     return (
       <input
-        type="text"
+        type={props.type}
         id={id}
         name={name}
         value={props.value}
