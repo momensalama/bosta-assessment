@@ -26,6 +26,12 @@ export interface CartItem {
   quantity: number;
 }
 
+export interface SignupInput {
+  username: string;
+  email: string;
+  password: string;
+}
+
 export interface AuthUser {
   id: number;
   username: string;

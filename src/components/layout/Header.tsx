@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
-      <div className="mx-auto max-w-7xl px-4 flex h-16 items-center justify-between">
+      <div className="mx-auto max-w-7xl gap-2 px-4 flex h-16 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <span className="text-2xl font-bold text-red-600">bosta</span>
