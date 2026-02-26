@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router";
 import { useAuthStore } from "./store/authStore";
 import Layout from "./components/layout/Layout";
 import ProductsPage from "./pages/ProductsPage";
+import ProductDetailsPage from "./pages/ProductDetailsPage";
 import type { ReactNode } from "react";
 
 // Placeholder pages for future pages
@@ -23,10 +24,7 @@ export default function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<ProductsPage />} />
-        <Route
-          path="/products/:id"
-          element={<ComingSoon page="Product Details" />}
-        />
+        <Route path="/products/:id" element={<ProductDetailsPage />} />
         <Route
           path="/create"
           element={
