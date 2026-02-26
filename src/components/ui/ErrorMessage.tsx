@@ -13,7 +13,7 @@ export default function ErrorMessage({
       {onRetry && (
         <button
           onClick={onRetry}
-          className="mt-3 text-sm text-red-600 underline hover:text-red-800"
+          className="mt-3 text-sm text-red-600 underline hover:text-red-800 cursor-pointer"
         >
           Try again
         </button>
